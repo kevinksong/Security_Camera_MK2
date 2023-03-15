@@ -1,0 +1,3 @@
+/home/pi/Desktop/Security_Camera_MK2/CMakeFiles/rebuild_cache.dir
+/home/pi/Desktop/Security_Camera_MK2/CMakeFiles/edit_cache.dir
+/home/pi/Desktop/Security_Camera_MK2/CMakeFiles/displayMotion.dir

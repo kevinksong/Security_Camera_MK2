@@ -5,7 +5,7 @@
 #include "opencv2/highgui.hpp"
 #include <iostream>
 #include <ctype.h>
-#include "cam.h"
+#include "./include/cam.h"
 using namespace cv;
 using namespace std;
 
