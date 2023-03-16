@@ -18,7 +18,6 @@ public:
 	void drawRectangle(Mat);
 	void saveVideo();
 	void captureVideo();
-	VideoCapture cap;
 private:
 	Mat frame;
 	Mat prev_frame;

@@ -2,10 +2,9 @@
 
 using namespace std;
 using namespace cv;
-
+VideoCapture cap(0);
 Camera::Camera() {
 	//initialize videocapture
-	cap = VideoCapture(0);
 	namedWindow("Display Window");
 	if (cap.isOpened()) {
 		//width of the video capture device
@@ -56,7 +55,9 @@ void Camera::drawRectangle(Mat frame) {
 void Camera::captureVideo() {
 	cap >> frame;
 	display_frame = frame;
-	cvtColor(frame, frame, COLOR_RGB2GRAY);
+	if (!frame.empty()) {
+		cvtColor(frame, frame, COLOR_RGB2GRAY);
+	}
 	compareFrames(prev_frame, current_frame, next_frame);
 	if (detectMovement(isMotion)) {
 		cout << "Movement detected." << endl;
@@ -116,4 +117,3 @@ bool Camera::detectMovement(Mat motion) {
 	}
 	return false;
 }
-
